@@ -17,6 +17,7 @@ const count = atom(0); // or use map() from nanostores to create a reactive obje
 
 class ReactiveCounter extends LitElement {
 	constructor() {
+		super();
 		this.counter = new litNanostore(this, count);
 	}
 	render() {
