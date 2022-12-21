@@ -20,3 +20,4 @@ export default class LitNanostore {
         this.host.requestUpdate();
     }
 }
+//# sourceMappingURL=nanostores.js.map
