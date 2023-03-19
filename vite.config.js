@@ -11,9 +11,12 @@ export default defineConfig({
     },
     build: {
         lib: {
-            entry: resolve(__dirname, 'lib/lit-stores.ts'),
-            name: 'litStores',
-            fileName: 'lit-stores'
+            entry: {
+                'lit-stores': resolve(__dirname, 'lib/lit-stores.ts'),
+                'nanostores': resolve(__dirname, 'lib/nanostores.ts'),
+                'preact-signals': resolve(__dirname, 'lib/preact-signals.ts'),
+                'vue-reactivity': resolve(__dirname, 'lib/vue-reactivity.ts')
+            },
         },
         rollupOptions: {
             external: ['@vue/reactivity', '@preact/signals-core', 'nanostores', 'lit'],
@@ -24,7 +27,8 @@ export default defineConfig({
                     '@preact/signals-core': 'PreactSignals' // Todo: figure this out
                 }
             }
-        }
+        },
+        outDir: 'dist'
     },
     plugins: [dts()]
 })

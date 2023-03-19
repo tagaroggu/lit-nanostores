@@ -1,22 +1,35 @@
 {
-  "name": "lit-nanostores",
+  "name": "lit-stores",
   "version": "0.1.0",
   "description": "A Lit controller for listening to nanostores",
   "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/lit-stores.js",
+  "types": "./dist/lit-stores.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "import": "./dist/lit-stores.js",
+      "require": "./dist/lit-stores.cjs",
+      "types": "./dist/lit-stores.d.ts"
     },
     "./nanostores": {
       "import": "./dist/nanostores.js",
+      "require": "./dist/nanostores.cjs",
       "types": "./dist/nanostores.d.ts"
+    },
+    "./vue-reactivity": {
+      "import": "./dist/vue-reactivity.js",
+      "require": "./dist/vue-reactivity.cjs",
+      "types": "./dist/vue-reactivity.d.ts"
+    },
+    "./preact-signals": {
+      "import": "./dist/preact-signals.js",
+      "require": "./dist/preact-signals.cjs",
+      "types": "./dist/preact-signals.d.ts"
     }
   },
   "scripts": {
-    "build": "vite build && tsc"
+    "build": "vite build",
+    "dev": "vite dev"
   },
   "keywords": [
     "lit",
@@ -48,6 +61,9 @@
       "optional": true
     },
     "@vue/reactivity": {
+      "optional": true
+    },
+    "@preact/signals-core": {
       "optional": true
     }
   }
