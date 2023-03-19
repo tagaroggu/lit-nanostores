@@ -1,5 +1,5 @@
 {
-    "include": ["./src/**/*"],
+    "include": ["lib/**/*"],
     "exclude": ["node_modules"],
     "compilerOptions": {
         "module": "ES2022",
@@ -7,6 +7,11 @@
         "moduleResolution": "node",
         "declaration": true,
         "sourceMap": true,
-        "outDir": "./dist"
+        "noEmit": false,
+        "emitDeclarationOnly": true,
+        "isolatedModules": true,
+        "types": ["vitest/importMeta"],
+        "checkJs": true,
+        "outDir": "dist"
     }
 }

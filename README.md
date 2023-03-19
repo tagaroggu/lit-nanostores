@@ -31,5 +31,5 @@ class ReactiveCounter extends LitElement {
 
 customElements.define('reactive-counter', ReactiveCounter);
 
-document.body.appendChild(new ReactiveCounter);
+document.body.appendChild(new ReactiveCounter());
 ```
